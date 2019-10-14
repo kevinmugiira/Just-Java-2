@@ -1,9 +1,8 @@
 package com.example.android.justjava2;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -43,32 +42,52 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void oderSubmit(View view){
-        int price = amount * 70;
-        String message = (": " + price );
-        String pMessage = message + "\n come again!";
-        displayPrices(pMessage);
+        //int price = amount * 70;
+
+
+        createOrderOfSummary(8);
+
 
 
     }
 
 
-    /**
-     * Calculates the price of the order.
+    /**This method creates a summary of
      *
-     * @paramis the number of cups of coffee ordered
+     *
      */
 
+    private String createOrderOfSummary(int price){
+        int number = amount * 50;
+        return "Name:kaptain kunal \n" +  amount + "\nTotal: " + price + "\nThank you!"  ;
 
+    }
+
+
+    /**  private String createWeatherMessage(int temperature, String cityName){
+          return"Wlecome to " + cityName + "where the temperature today is " + temperature + "degrees";
+      }
+  **/
+
+    /**
+     * Calculates the price of the order.
+     **/
+
+   /** private int calculatePrice() {
+        int price = amount * 5 ;
+        return price;
+    }
+**/
 
     public void displayAm(int number) {
         TextView tv = (TextView) findViewById(R.id.quantity_tv);
         tv.setText("" + number);
     }
 
-    public void displayPrice(int number) {
-        TextView textv = (TextView) findViewById(R.id.price_titlev);
-        textv.setText(NumberFormat.getCurrencyInstance().format(number));
-    }
+    //public void displayPrice(int number) {
+      //  TextView textv = (TextView) findViewById(R.id.price_titlev);
+      //  textv.setText(NumberFormat.getCurrencyInstance().format(number));
+   // }
 
     public void displayPrices(String message){
         TextView ttv = (TextView) findViewById(R.id.price_tv);

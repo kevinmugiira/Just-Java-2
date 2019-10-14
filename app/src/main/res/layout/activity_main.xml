@@ -12,28 +12,33 @@
         android:id="@+id/title_textview"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginEnd="78dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
         android:text="@string/quantity"
         android:textColor="@android:color/holo_red_light"
         android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:gravity="center_horizontal"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="4dp">
+
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center_horizontal">
 
         <Button
             android:id="@+id/increment_btn"
-            android:layout_width="48dp"
+            android:layout_width="80dp"
             android:layout_height="48dp"
             android:text="@string/plus"
             android:onClick="increase"
-            android:background="@android:color/holo_blue_light"/>
+            android:background="@android:color/holo_blue_light"
+            android:gravity="center"
+            android:padding="5dp"/>
 
         <TextView
             android:id="@+id/quantity_tv"
@@ -41,20 +46,23 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:layout_marginStart="4dp"
-            android:text="@string/_1" />
+            android:text="@string/_1"
+            android:textSize="36sp"/>
 
         <Button
             android:id="@+id/decreament_btn"
-            android:layout_width="48dp"
+            android:layout_width="80dp"
             android:layout_height="48dp"
             android:text="@string/minus"
             android:onClick="decrease"
-            android:background="@android:color/holo_blue_light"/>
+            android:background="@android:color/holo_blue_light"
+            android:gravity="center"
+            android:padding="5dp"/>
     </LinearLayout>
 
     <TextView
         android:id="@+id/price_titlev"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
@@ -62,21 +70,23 @@
         android:textAllCaps="true"
         android:textColor="@android:color/holo_red_light"
         android:textSize="24sp"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/price_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="5dp"
-        android:text="@string/ksh" />
+        android:text="@string/ksh"
+        android:gravity="center_horizontal"/>
 
     <Button
         android:id="@+id/order_btn"
         android:layout_width="100dp"
         android:layout_height="48dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="5dp"
         android:background="@android:color/holo_blue_light"
         android:onClick="oderSubmit"
@@ -86,7 +96,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal">
 
         <ImageView
             android:id="@+id/coffee_imgv1"
